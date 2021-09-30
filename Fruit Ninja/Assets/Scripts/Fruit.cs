@@ -9,15 +9,33 @@ public class Fruit : MonoBehaviour
     private float verticalVelocity;
     private float speed;
 
+    private void Start(){
+        LaunchFruit(2.0f, 2,-1);
+    }
     public void LaunchFruit(float verticalVelocity, float xSpeed, float xStart){
         isActive = true;
-        this.velocity = velocity; 
         speed = xSpeed; 
-
+        this.verticalVelocity = verticalVelocity; 
         transform.position = new Vector3(xStart, 0, 0);
     }
 
     private void Update() {
-        velocity -= GRAVITY * Time.deltaTime;
+        if(!isActive){
+            return;
+        }
+
+        verticalVelocity -= GRAVITY * Time.deltaTime;
+        transform.position += new Vector3(speed, verticalVelocity, 0) * Time.deltaTime;
+
+        if (transform.position.y < -1){
+            isActive = false;      
+        }
+    }
+
+    public void Slice(){
+        if(verticalVelocity < 0.5f)
+            verticalVelocity = 0.5f;
+
+        speed = speed * 0.5f;
     }
 }
