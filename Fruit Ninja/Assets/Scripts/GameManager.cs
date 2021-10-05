@@ -8,13 +8,13 @@ public class GameManager : MonoBehaviour
     public GameObject fruitPrefab;
 
     private float lastSpawn; 
-    private float deltaSpawn = 2.0f;
+    private float deltaSpawn = 1.0f;
 
     private void Update(){
         if (Time.time - lastSpawn > deltaSpawn){
             Fruit f = GetFruit();
-            float randomX = Random.Range(-1.5f, 1.5f);
-            f.LaunchFruit(Random.Range(1.5f,3.0f), randomX,  -randomX);
+            float randomX = Random.Range(-1.65f, 1.65f);
+            f.LaunchFruit(Random.Range(1.85f,2.75f), randomX,  -randomX);
 
             lastSpawn = Time.time;
         }
