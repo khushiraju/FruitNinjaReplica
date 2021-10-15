@@ -6,9 +6,11 @@ public class GameManager : MonoBehaviour
 {
     private List<Fruit> fruits = new List<Fruit>();
     public GameObject fruitPrefab;
+    public Transform trail;
 
     private float lastSpawn; 
     private float deltaSpawn = 1.0f;
+    private Collider[] fruitsCols;
 
     private void Update(){
         if (Time.time - lastSpawn > deltaSpawn){
@@ -17,6 +19,15 @@ public class GameManager : MonoBehaviour
             f.LaunchFruit(Random.Range(1.85f,2.75f), randomX,  -randomX);
 
             lastSpawn = Time.time;
+        }
+
+        if(Input.GetMouseButton(0)){
+            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //Physics2D.RaycastAll(new Vector2(pos.x, pos.y), , )
+            pos.z = -1;
+            trail.position = pos;
+
+            // work on overlap for the fruit components 
         }
     }
 
