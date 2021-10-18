@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     private float lastSpawn; 
     private float deltaSpawn = 1.0f;
-    private Collider[] fruitsCols;
+    private Collider2D[] fruitCols;
 
     private void Update(){
         if (Time.time - lastSpawn > deltaSpawn){
@@ -23,11 +23,21 @@ public class GameManager : MonoBehaviour
 
         if(Input.GetMouseButton(0)){
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            //Physics2D.RaycastAll(new Vector2(pos.x, pos.y), , )
             pos.z = -1;
             trail.position = pos;
+            Collider2D[] thisFramesFruit = Physics2D.OverlapPointAll(new Vector2(pos.x, pos.y), LayerMask.GetMask("Fruit"));
+            Debug.Log(thisFramesFruit.Length);
+            foreach(Collider2D coll in thisFramesFruit){
+                Debug.Log(coll.name);
+                for(int i = 0; i < fruitCols.Length; i++){
+                    if (coll == fruitCols[i]){
+                        Debug.Log("its a match");
+                    }
+                }
+            }
+            fruitCols = thisFramesFruit;
 
-            // work on overlap for the fruit components 
+            //work on figuring out why fruits arent being put into the array
         }
     }
 
@@ -41,5 +51,4 @@ public class GameManager : MonoBehaviour
         return f;
     }
 
-    // 33:40
 }
