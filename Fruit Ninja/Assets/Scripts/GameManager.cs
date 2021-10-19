@@ -10,7 +10,12 @@ public class GameManager : MonoBehaviour
 
     private float lastSpawn; 
     private float deltaSpawn = 1.0f;
+    private Vector3 lastMousePos;
     private Collider2D[] fruitCols;
+
+    private void Start(){
+        fruitCols = new Collider2D[0];
+    }
 
     private void Update(){
         if (Time.time - lastSpawn > deltaSpawn){
@@ -22,22 +27,22 @@ public class GameManager : MonoBehaviour
         }
 
         if(Input.GetMouseButton(0)){
+            lastMousePos = Input.mousePosition;
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             pos.z = -1;
             trail.position = pos;
             Collider2D[] thisFramesFruit = Physics2D.OverlapPointAll(new Vector2(pos.x, pos.y), LayerMask.GetMask("Fruit"));
-            Debug.Log(thisFramesFruit.Length);
-            foreach(Collider2D coll in thisFramesFruit){
-                Debug.Log(coll.name);
-                for(int i = 0; i < fruitCols.Length; i++){
-                    if (coll == fruitCols[i]){
-                        Debug.Log("its a match");
+            
+            if((Input.mousePosition - lastMousePos).sqrMagnitude > 9){
+                foreach(Collider2D c2 in thisFramesFruit){
+                    for(int i = 0; i < fruitCols.Length; i++){
+                        if (c2 == fruitCols[i]){
+                        }
                     }
                 }
+                fruitCols = thisFramesFruit;
             }
-            fruitCols = thisFramesFruit;
-
-            //work on figuring out why fruits arent being put into the array
+            
         }
     }
 
