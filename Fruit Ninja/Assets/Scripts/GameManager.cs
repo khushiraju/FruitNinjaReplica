@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     private float lastSpawn; 
     private float deltaSpawn = 1.0f;
+    private const float REQUIRED_SLICEFORCE = 400.0f;
     private Vector3 lastMousePos;
     private Collider2D[] fruitCols;
 
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void Update(){
+
         if (Time.time - lastSpawn > deltaSpawn){
             Fruit f = GetFruit();
             float randomX = Random.Range(-1.65f, 1.65f);
@@ -27,22 +29,23 @@ public class GameManager : MonoBehaviour
         }
 
         if(Input.GetMouseButton(0)){
-            lastMousePos = Input.mousePosition;
+            
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             pos.z = -1;
             trail.position = pos;
             Collider2D[] thisFramesFruit = Physics2D.OverlapPointAll(new Vector2(pos.x, pos.y), LayerMask.GetMask("Fruit"));
-            
-            if((Input.mousePosition - lastMousePos).sqrMagnitude > 9){
+            //Debug.Log((Input.mousePosition- lastMousePos).sqrMagnitude);
+            if((Input.mousePosition - lastMousePos).sqrMagnitude > REQUIRED_SLICEFORCE){
                 foreach(Collider2D c2 in thisFramesFruit){
                     for(int i = 0; i < fruitCols.Length; i++){
                         if (c2 == fruitCols[i]){
+                            Debug.Log(c2.name);
                         }
                     }
                 }
-                fruitCols = thisFramesFruit;
             }
-            
+            lastMousePos = Input.mousePosition;
+            fruitCols = thisFramesFruit;
         }
     }
 
