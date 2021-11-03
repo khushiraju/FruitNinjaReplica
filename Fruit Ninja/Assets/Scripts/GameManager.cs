@@ -10,12 +10,12 @@ public class GameManager : MonoBehaviour
 
     private float lastSpawn; 
     private float deltaSpawn = 1.0f;
-    private const float REQUIRED_SLICEFORCE = 400.0f;
+    private const float REQUIRED_SLICEFORCE = 100.0f;
     private Vector3 lastMousePos;
     private Collider2D[] fruitCols;
 
     private void Start(){
-        fruitCols = new Collider2D[0];
+        //fruitCols = new Collider2D[0];
     }
 
     private void Update(){
@@ -33,16 +33,20 @@ public class GameManager : MonoBehaviour
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             pos.z = -1;
             trail.position = pos;
+
             Collider2D[] thisFramesFruit = Physics2D.OverlapPointAll(new Vector2(pos.x, pos.y), LayerMask.GetMask("Fruit"));
-            //Debug.Log((Input.mousePosition- lastMousePos).sqrMagnitude);
-            if((Input.mousePosition - lastMousePos).sqrMagnitude > REQUIRED_SLICEFORCE){
-                foreach(Collider2D c2 in thisFramesFruit){
-                    for(int i = 0; i < fruitCols.Length; i++){
-                        if (c2 == fruitCols[i]){
-                            Debug.Log(c2.name);
-                        }
+            
+            if((Input.mousePosition - lastMousePos).sqrMagnitude > REQUIRED_SLICEFORCE){ 
+                 foreach(Collider2D c2 in thisFramesFruit){
+                     Debug.Log(c2.name);
+                     Debug.Log((Input.mousePosition - lastMousePos).sqrMagnitude);
+                     for(int i = 0; i < fruitCols.Length; i++){
+                         Debug.Log("went inside the loop");
+                         if (c2 == fruitCols[i]){
+                             Debug.Log("loop " +c2.name);
+                         }
                     }
-                }
+                 }
             }
             lastMousePos = Input.mousePosition;
             fruitCols = thisFramesFruit;

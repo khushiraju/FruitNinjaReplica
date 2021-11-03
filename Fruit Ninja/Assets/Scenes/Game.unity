@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 1254804457}
   - component: {fileID: 1254804456}
   - component: {fileID: 1254804459}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Fruit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
