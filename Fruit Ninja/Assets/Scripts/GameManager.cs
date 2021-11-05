@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
     }
 
     private void Update(){
-
         if (Time.time - lastSpawn > deltaSpawn){
             Fruit f = GetFruit();
             float randomX = Random.Range(-1.65f, 1.65f);
@@ -29,7 +28,6 @@ public class GameManager : MonoBehaviour
         }
 
         if(Input.GetMouseButton(0)){
-            
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             pos.z = -1;
             trail.position = pos;

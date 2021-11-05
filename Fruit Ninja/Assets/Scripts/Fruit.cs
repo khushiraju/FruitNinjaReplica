@@ -8,9 +8,11 @@ public class Fruit : MonoBehaviour
     private const float GRAVITY = 2.0f;
     private float verticalVelocity;
     private float speed;
+    private bool isSliced{set; get;}
 
     private void Start(){
         LaunchFruit(2.0f, 2,-1);
+        isSliced = false;
     }
     public void LaunchFruit(float verticalVelocity, float xSpeed, float xStart){
         isActive = true;
@@ -28,14 +30,19 @@ public class Fruit : MonoBehaviour
         transform.position += new Vector3(speed, verticalVelocity, 0) * Time.deltaTime;
 
         if (transform.position.y < -1){
-            isActive = false;      
+            isActive = false; 
+            isSliced = false;     
         }
     }
 
     public void Slice(){
-        if(verticalVelocity < 0.5f)
-            verticalVelocity = 0.5f;
-
-        speed = speed * 0.5f;
+        if(isSliced == false){
+            if(verticalVelocity < 0.5f){
+                verticalVelocity = 0.5f;
+            }
+            speed = speed * 0.5f;
+            Debug.Log("fruit sliced");
+        }
+        isSliced = true;
     }
 }
