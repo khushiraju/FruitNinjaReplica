@@ -42,6 +42,7 @@ public class Fruit : MonoBehaviour
             }
             speed = speed * 0.5f;
             Debug.Log("fruit sliced");
+            GameManager.score++;
         }
         isSliced = true;
     }

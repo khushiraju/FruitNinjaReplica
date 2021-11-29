@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class GameManager : MonoBehaviour
     public GameObject fruitPrefab;
     public Transform trail;
 
+    public static int score = 0;
+    //public Text scoreText;
     private float lastSpawn; 
     private float deltaSpawn = 1.0f;
     private const float REQUIRED_SLICEFORCE = 10.0f;
@@ -16,9 +19,15 @@ public class GameManager : MonoBehaviour
 
     private void Start(){
         fruitCols = new Collider2D[0];
+        //scoreText.text = "0";
     }
 
     private void Update(){
+        //scoreText.text = score.ToString();
+        //ScoreNum.GetComponent<UnityEngine.UI.Text>().text = score;
+        //scoreText = (Text.FindWithTag("ScoreNum")).GetComponent<Text>();
+        //scoreText.text = score.ToString();
+        //Debug.Log("score text "+scoreText);
         if (Time.time - lastSpawn > deltaSpawn){
             Fruit f = GetFruit();
             float randomX = Random.Range(-1.65f, 1.65f);
@@ -40,6 +49,7 @@ public class GameManager : MonoBehaviour
                         if (c2 == fruitCols[i]){
                             c2.GetComponent<Fruit>().Slice();  //55:40
                         }
+                        Debug.Log(score);
                     }
                 }
             }
