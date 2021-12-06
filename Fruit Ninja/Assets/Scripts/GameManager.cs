@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     public Transform trail;
 
     public static int score = 0;
-    //public Text scoreText;
     private float lastSpawn; 
     private float deltaSpawn = 1.0f;
     private const float REQUIRED_SLICEFORCE = 10.0f;
@@ -19,15 +18,9 @@ public class GameManager : MonoBehaviour
 
     private void Start(){
         fruitCols = new Collider2D[0];
-        //scoreText.text = "0";
     }
 
     private void Update(){
-        //scoreText.text = score.ToString();
-        //ScoreNum.GetComponent<UnityEngine.UI.Text>().text = score;
-        //scoreText = (Text.FindWithTag("ScoreNum")).GetComponent<Text>();
-        //scoreText.text = score.ToString();
-        //Debug.Log("score text "+scoreText);
         if (Time.time - lastSpawn > deltaSpawn){
             Fruit f = GetFruit();
             float randomX = Random.Range(-1.65f, 1.65f);
@@ -47,9 +40,13 @@ public class GameManager : MonoBehaviour
                 foreach(Collider2D c2 in thisFramesFruit){
                     for(int i = 0; i < fruitCols.Length; i++){
                         if (c2 == fruitCols[i]){
-                            c2.GetComponent<Fruit>().Slice();  //55:40
+                            c2.GetComponent<Fruit>().Slice();  
                         }
-                        Debug.Log(score);
+                        //else if(c2.transform.position < -1){
+                        //    score = 0;
+                        //}
+                        Debug.Log("score " + score);
+                        //Debug.Log(c2.transform.position);
                     }
                 }
             }
