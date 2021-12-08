@@ -9,10 +9,13 @@ public class Fruit : MonoBehaviour
     private float verticalVelocity;
     private float speed;
     private bool isSliced{set; get;}
+    public Sprite strawberry;
+    public Sprite sliced_strawberry;
 
     private void Start(){
         LaunchFruit(2.0f, 2,-1);
         isSliced = false;
+        
     }
     public void LaunchFruit(float verticalVelocity, float xSpeed, float xStart){
         isActive = true;
@@ -31,7 +34,8 @@ public class Fruit : MonoBehaviour
 
         if (transform.position.y < -1){
             isActive = false; 
-            isSliced = false;     
+            isSliced = false;
+            GetComponent<SpriteRenderer>().sprite = strawberry;     
         }
     }
 
@@ -41,7 +45,7 @@ public class Fruit : MonoBehaviour
                 verticalVelocity = 0.5f;
             }
             speed = speed * 0.5f;
-            Debug.Log("fruit sliced");
+            GetComponent<SpriteRenderer>().sprite = sliced_strawberry;
             GameManager.score++;
         }
         isSliced = true;

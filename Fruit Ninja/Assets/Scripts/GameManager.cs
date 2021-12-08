@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour
                         if (c2 == fruitCols[i]){
                             c2.GetComponent<Fruit>().Slice();  
                         }
-                        Debug.Log("score " + score);
                     }
                 }
             }

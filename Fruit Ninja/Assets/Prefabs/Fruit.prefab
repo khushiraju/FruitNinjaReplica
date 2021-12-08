@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d756f11137fbe46268593c8fe5a8622a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  strawberry: {fileID: 21300000, guid: 6d2244053a4e24f08a73a0434443d0aa, type: 3}
+  sliced_strawberry: {fileID: 21300000, guid: f4b679968f3c8483789f4aecd3043617, type: 3}
 --- !u!212 &6729911705040549032
 SpriteRenderer:
   m_ObjectHideFlags: 0
