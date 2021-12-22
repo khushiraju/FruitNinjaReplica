@@ -13,7 +13,7 @@ public class Bomb : MonoBehaviour
     public Sprite exploded_bomb;
 
     private void Start(){
-        LaunchBomb(2.0f, 2,-1);
+        LaunchBomb(2.0f, 1,-1);
         isSliced = false;
         
     }

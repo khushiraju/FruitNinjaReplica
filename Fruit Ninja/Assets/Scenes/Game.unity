@@ -716,6 +716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fruitPrefab: {fileID: 6729911705040549031, guid: 7ad93fdd5955e4627bb391e441c7fba0, type: 3}
+  bombPrefab: {fileID: 0}
   trail: {fileID: 935898864}
 --- !u!4 &1422513731
 Transform:
@@ -1002,7 +1003,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeRemaining: 60
-  timerIsRunning: 0
   timeText: {fileID: 1804658479}
 --- !u!1 &2034294157
 GameObject:

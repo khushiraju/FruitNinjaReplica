@@ -9,6 +9,16 @@
 /nostdlib+
 /preferreduilang:en-US
 /langversion:8.0
+/reference:"Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll"
+/reference:"Library/ScriptAssemblies/Unity.Rider.Editor.dll"
+/reference:"Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll"
+/reference:"Library/ScriptAssemblies/Unity.TextMeshPro.dll"
+/reference:"Library/ScriptAssemblies/Unity.Timeline.Editor.dll"
+/reference:"Library/ScriptAssemblies/Unity.Timeline.dll"
+/reference:"Library/ScriptAssemblies/Unity.VSCode.Editor.dll"
+/reference:"Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll"
+/reference:"Library/ScriptAssemblies/UnityEditor.UI.dll"
+/reference:"Library/ScriptAssemblies/UnityEngine.UI.dll"
 /reference:"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll"
 /reference:"/Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 /reference:"/Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.GraphViewModule.dll"
@@ -199,16 +209,6 @@
 /reference:"/Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlDocument.dll"
 /reference:"/Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlSerializer.dll"
 /reference:"/Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll"
-/reference:"Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll"
-/reference:"Library/ScriptAssemblies/Unity.Rider.Editor.dll"
-/reference:"Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll"
-/reference:"Library/ScriptAssemblies/Unity.TextMeshPro.dll"
-/reference:"Library/ScriptAssemblies/Unity.Timeline.Editor.dll"
-/reference:"Library/ScriptAssemblies/Unity.Timeline.dll"
-/reference:"Library/ScriptAssemblies/Unity.VSCode.Editor.dll"
-/reference:"Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll"
-/reference:"Library/ScriptAssemblies/UnityEditor.UI.dll"
-/reference:"Library/ScriptAssemblies/UnityEngine.UI.dll"
 /define:CSHARP_7_3_OR_NEWER
 /define:CSHARP_7_OR_LATER
 /define:DEBUG

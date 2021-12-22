@@ -1,15 +1,19 @@
 /target:library
-/out:"Temp/Assembly-CSharp.dll"
+/out:"Temp/UnityEngine.UI.dll"
 /nowarn:0169
 /nowarn:0649
-/refout:"Temp/Assembly-CSharp.dll.ref"
+/refout:"Temp/UnityEngine.UI.dll.ref"
 /deterministic
 /debug:portable
 /optimize+
 /nostdlib+
 /preferreduilang:en-US
 /langversion:8.0
+/reference:"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll"
+/reference:"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/log4netPlastic.dll"
+/reference:"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.collab-proxy@1.7.1/Lib/Editor/PlasticSCM/unityplastic.dll"
 /reference:"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll"
+/reference:"/Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/Managed/UnityEditor.Graphs.dll"
 /reference:"/Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 /reference:"/Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.GraphViewModule.dll"
 /reference:"/Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.PackageManagerUIModule.dll"
@@ -199,16 +203,7 @@
 /reference:"/Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlDocument.dll"
 /reference:"/Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlSerializer.dll"
 /reference:"/Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll"
-/reference:"Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll"
-/reference:"Library/ScriptAssemblies/Unity.Rider.Editor.dll"
-/reference:"Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll"
-/reference:"Library/ScriptAssemblies/Unity.TextMeshPro.dll"
-/reference:"Library/ScriptAssemblies/Unity.Timeline.Editor.dll"
-/reference:"Library/ScriptAssemblies/Unity.Timeline.dll"
-/reference:"Library/ScriptAssemblies/Unity.VSCode.Editor.dll"
-/reference:"Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll"
-/reference:"Library/ScriptAssemblies/UnityEditor.UI.dll"
-/reference:"Library/ScriptAssemblies/UnityEngine.UI.dll"
+/reference:"/Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll"
 /define:CSHARP_7_3_OR_NEWER
 /define:CSHARP_7_OR_LATER
 /define:DEBUG
@@ -274,6 +269,10 @@
 /define:ENABLE_WWW
 /define:INCLUDE_DYNAMIC_GI
 /define:NET_STANDARD_2_0
+/define:PACKAGE_ANIMATION
+/define:PACKAGE_PHYSICS
+/define:PACKAGE_PHYSICS2D
+/define:PACKAGE_TILEMAP
 /define:PLATFORM_ARCH_64
 /define:PLATFORM_STANDALONE
 /define:PLATFORM_STANDALONE_OSX
@@ -314,7 +313,88 @@
 /define:UNITY_STANDALONE_OSX
 /define:UNITY_TEAM_LICENSE
 /define:USE_SEARCH_ENGINE_API
-"Assets/Scripts/Fruit.cs"
-"Assets/Scripts/GameManager.cs"
-"Assets/Scripts/Score.cs"
-"Assets/Scripts/Timer.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/AxisEventData.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/BaseEventData.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/PointerEventData.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventHandle.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventInterfaces.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventTrigger.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventTriggerType.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInputModule.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/PointerInputModule.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/StandaloneInputModule.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/TouchInputModule.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/MoveDirection.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/RaycastResult.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/RaycasterManager.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/Raycasters/BaseRaycaster.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/Raycasters/Physics2DRaycaster.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/Raycasters/PhysicsRaycaster.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/Properties/AssemblyInfo.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Animation/CoroutineTween.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/AnimationTriggers.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/CanvasUpdateRegistry.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/ColorBlock.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Culling/ClipperRegistry.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Culling/Clipping.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Culling/IClipRegion.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Culling/RectangularVertexClipper.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/DefaultControls.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Dropdown.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/FontData.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/FontUpdateTracker.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Graphic.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/GraphicRaycaster.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/GraphicRebuildTracker.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/GraphicRegistry.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/IGraphicEnabledDisabled.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/IMask.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/IMaskable.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Image.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/InputField.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/AspectRatioFitter.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/CanvasScaler.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/ContentSizeFitter.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/GridLayoutGroup.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/HorizontalLayoutGroup.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/HorizontalOrVerticalLayoutGroup.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/ILayoutElement.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/LayoutElement.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/LayoutGroup.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/LayoutRebuilder.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/LayoutUtility.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/VerticalLayoutGroup.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Mask.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/MaskUtilities.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/MaskableGraphic.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/MaterialModifiers/IMaterialModifier.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Misc.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/MultipleDisplayUtilities.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Navigation.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/RawImage.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/RectMask2D.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/ScrollRect.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Scrollbar.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Selectable.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/SetPropertyUtility.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Slider.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/SpecializedCollections/IndexedSet.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/SpriteState.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/StencilMaterial.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Text.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Toggle.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/ToggleGroup.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Utility/ListPool.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Utility/ObjectPool.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Utility/ReflectionMethodsCache.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Utility/VertexHelper.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/VertexModifiers/BaseMeshEffect.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/VertexModifiers/IMeshModifier.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/VertexModifiers/Outline.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/VertexModifiers/PositionAsUV1.cs"
+"/Users/khushiraju/Documents/GitHub/FruitNinjaReplica/Fruit Ninja/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/VertexModifiers/Shadow.cs"
