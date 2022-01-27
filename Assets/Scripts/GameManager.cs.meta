@@ -5,7 +5,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - fruitPrefab: {fileID: 6729911705040549031, guid: 7ad93fdd5955e4627bb391e441c7fba0, type: 3}
-  - bombPrefab: {fileID: 4684358581315891933, guid: a7e94f11b37b143cead11ebd66dd5290, type: 3}
+  - bombPrefab: {fileID: 2694200096804454626, guid: a7e94f11b37b143cead11ebd66dd5290, type: 3}
   - trail: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
