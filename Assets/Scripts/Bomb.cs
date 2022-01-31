@@ -17,15 +17,13 @@ public class Bomb : MonoBehaviour
         LaunchBomb(3.0f, 1, -1);
         isSliced = false;
     }
-
     public void LaunchBomb(float verticalVelocity, float xSpeed, float xStart){
         isActive = true;
         speed = xSpeed; 
         this.verticalVelocity = verticalVelocity; 
-        transform.position = new Vector3(xStart, 0, 0);
+        transform.position = new Vector3(xStart, 0, 0);     
     }
 
-    
     void Update()
     {
         if(!isActive){

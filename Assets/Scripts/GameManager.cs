@@ -31,8 +31,8 @@ public class GameManager : MonoBehaviour
                 float randomX = Random.Range(-1.65f, 1.65f);
                 float randomX2 = Random.Range(-1.70f, 1.70f);
                 f.LaunchFruit(Random.Range(1.85f,2.75f), randomX,  -randomX);
-                if(Timer.timeRemaining % 13 == 0){
-                    b.LaunchBomb(Random.Range(1.85f,2.75f), randomX2,  -randomX2);
+                if(Timer.timeRemaining % 10 > 0 && Timer.timeRemaining % 10 < 1){
+                    b.LaunchBomb(Random.Range(1.85f,2.75f), randomX2,  -randomX2);  
                 }
                 lastSpawn = Time.time;
             }
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
                 trail.position = pos;
 
                 Collider2D[] thisFramesFruit = Physics2D.OverlapPointAll(new Vector2(pos.x, pos.y), LayerMask.GetMask("Fruit"));
-                Collider2D[] thisFramesBomb = Physics2D.OverlapPointAll(new Vector2(pos.x, pos.y), LayerMask.GetMask("Fruit"));
+                Collider2D[] thisFramesBomb = Physics2D.OverlapPointAll(new Vector2(pos.x, pos.y), LayerMask.GetMask("Bomb"));
 
                 if((Input.mousePosition - lastMousePos).sqrMagnitude > REQUIRED_SLICEFORCE){ 
                     foreach(Collider2D c2 in thisFramesFruit){
@@ -53,11 +53,18 @@ public class GameManager : MonoBehaviour
                             }
                         }
                     }
+                    foreach(Collider2D b2 in thisFramesBomb){
+                        for(int i = 0; i < bombCols.Length; i++){
+                            if (b2 == bombCols[i]){
+                                b2.GetComponent<Bomb>().Slice();  
+                            }
+                        }
+                    }
                 }
 
                 lastMousePos = Input.mousePosition;
                 fruitCols = thisFramesFruit;
-                
+                bombCols = thisFramesBomb;
             }
         
     }
