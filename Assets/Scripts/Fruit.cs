@@ -65,6 +65,7 @@ public class Fruit : MonoBehaviour
                 verticalVelocity = 0.5f;
             }
             speed = speed * 0.5f;
+            GetComponent<SpriteRenderer>().sprite = sliced_strawberry;
             if (fruitName.Equals("strawberry")){
                 GetComponent<SpriteRenderer>().sprite = sliced_strawberry;
             }
