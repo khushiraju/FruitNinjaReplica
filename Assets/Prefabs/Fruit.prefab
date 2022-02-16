@@ -47,6 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strawberry: {fileID: 21300000, guid: 6d2244053a4e24f08a73a0434443d0aa, type: 3}
   sliced_strawberry: {fileID: 21300000, guid: f4b679968f3c8483789f4aecd3043617, type: 3}
+  pomegranate: {fileID: 21300000, guid: 611982ded6ef043c0aefda5f81286d2a, type: 3}
+  sliced_pomegranate: {fileID: 21300000, guid: 7fff71f81808c40798b9790531451e72, type: 3}
+  dragonfruit: {fileID: 21300000, guid: 6bb4952a97d014833a76a1d4a18bf67f, type: 3}
+  sliced_dragonfruit: {fileID: 21300000, guid: e0224f04fe5f04abebb712b6a9b2ec16, type: 3}
 --- !u!212 &6729911705040549032
 SpriteRenderer:
   m_ObjectHideFlags: 0

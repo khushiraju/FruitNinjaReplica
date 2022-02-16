@@ -8,6 +8,7 @@ public class Bomb : MonoBehaviour
     private const float GRAVITY = 2.0f;
     private float verticalVelocity;
     private float speed;
+    public static float sliceNum = 0;
     private bool isSliced{set; get;}
     public Sprite bomb;
     public Sprite sliced_bomb;
@@ -47,9 +48,8 @@ public class Bomb : MonoBehaviour
             }
             speed = speed * 0.5f;
             GetComponent<SpriteRenderer>().sprite = sliced_bomb;
-            if (GameManager.score > 0){
-                GameManager.score--;
-            }
+            sliceNum++;
+            Debug.Log(sliceNum);
         }
         isSliced = true;
     }

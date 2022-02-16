@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void Update(){
-            if ((Time.time - lastSpawn > deltaSpawn) && (Timer.timerIsRunning == true)){
+            if ((Time.time - lastSpawn > deltaSpawn) && (Timer.timerIsRunning == true) && (Bomb.sliceNum < 3)){
                 Fruit f = GetFruit();
                 Bomb b = GetBomb();
                 float randomX = Random.Range(-1.65f, 1.65f);

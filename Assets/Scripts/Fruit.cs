@@ -11,6 +11,11 @@ public class Fruit : MonoBehaviour
     private bool isSliced{set; get;}
     public Sprite strawberry;
     public Sprite sliced_strawberry;
+    public Sprite pomegranate;
+    public Sprite sliced_pomegranate;
+    public Sprite dragonfruit;
+    public Sprite sliced_dragonfruit;
+    public string fruitName;
 
     private void Start(){
         LaunchFruit(2.0f, 2,-1);
@@ -31,11 +36,26 @@ public class Fruit : MonoBehaviour
 
         verticalVelocity -= GRAVITY * Time.deltaTime;
         transform.position += new Vector3(speed, verticalVelocity, 0) * Time.deltaTime;
+        float randomNumber = Random.Range(1, 4);
 
-        if (transform.position.y < -1){
+        if ((transform.position.y < -1)){
             isActive = false; 
             isSliced = false;
-            GetComponent<SpriteRenderer>().sprite = strawberry;     
+            Debug.Log(randomNumber);
+            GetComponent<SpriteRenderer>().sprite = strawberry;
+            fruitName = "strawberry";
+            if (randomNumber == 1){
+                GetComponent<SpriteRenderer>().sprite = strawberry; 
+                fruitName = "strawberry";
+            }
+            else if (randomNumber == 2){
+                GetComponent<SpriteRenderer>().sprite = pomegranate; 
+                fruitName = "pomegranate";
+            }
+            else if (randomNumber == 3){
+                GetComponent<SpriteRenderer>().sprite = dragonfruit; 
+                fruitName = "dragonfruit";
+            }   
         }
     }
 
@@ -45,7 +65,15 @@ public class Fruit : MonoBehaviour
                 verticalVelocity = 0.5f;
             }
             speed = speed * 0.5f;
-            GetComponent<SpriteRenderer>().sprite = sliced_strawberry;
+            if (fruitName.Equals("strawberry")){
+                GetComponent<SpriteRenderer>().sprite = sliced_strawberry;
+            }
+            else if (fruitName.Equals("pomegranate")){
+                GetComponent<SpriteRenderer>().sprite = sliced_pomegranate;
+            }
+            else if (fruitName.Equals("dragonfruit")){
+                GetComponent<SpriteRenderer>().sprite = sliced_dragonfruit;
+            }
             GameManager.score++;
         }
         isSliced = true;

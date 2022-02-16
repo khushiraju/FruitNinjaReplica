@@ -102,3 +102,83 @@ C# parse time         : 335ms
 candidates check time : 45ms
 console write time    : 0ms
 
+[api-updater (non-obsolete-error-filter)] 2/2/2022 8:07:49 AM : Starting /Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 141.46ms
+moved types parse time: 59ms
+candidates parse time : 1ms
+C# parse time         : 266ms
+candidates check time : 32ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 2/2/2022 8:09:12 AM : Starting /Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 128.89ms
+moved types parse time: 56ms
+candidates parse time : 1ms
+C# parse time         : 286ms
+candidates check time : 38ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 2/2/2022 8:10:11 AM : Starting /Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 48.403ms
+moved types parse time: 45ms
+candidates parse time : 1ms
+C# parse time         : 186ms
+candidates check time : 33ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 2/7/2022 8:04:26 AM : Starting /Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 119.193ms
+moved types parse time: 51ms
+candidates parse time : 1ms
+C# parse time         : 244ms
+candidates check time : 31ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 2/8/2022 7:55:54 AM : Starting /Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 157.037ms
+moved types parse time: 59ms
+candidates parse time : 1ms
+C# parse time         : 316ms
+candidates check time : 36ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 2/8/2022 7:57:34 AM : Starting /Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 122.719ms
+moved types parse time: 53ms
+candidates parse time : 1ms
+C# parse time         : 307ms
+candidates check time : 34ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 2/8/2022 7:57:54 AM : Starting /Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 44.444ms
+moved types parse time: 41ms
+candidates parse time : 1ms
+C# parse time         : 197ms
+candidates check time : 29ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 2/8/2022 8:13:47 AM : Starting /Users/khushiraju/Documents/Unity/2020.3.17f1/Unity.app/Contents/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 117.271ms
+moved types parse time: 56ms
+candidates parse time : 1ms
+C# parse time         : 318ms
+candidates check time : 43ms
+console write time    : 0ms
+

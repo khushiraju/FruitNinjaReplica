@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public static float timeRemaining = 60;
+    public static float fruitTimer = 0;
     public static bool timerIsRunning = false;
     public Text timeText;
 
@@ -22,10 +23,11 @@ public class Timer : MonoBehaviour
     {
         if (timerIsRunning)
         {
-            if (timeRemaining > 0)
+            if ((timeRemaining > 0) && (Bomb.sliceNum < 3))
             {
                 timeRemaining -= Time.deltaTime;
                 DisplayTime(timeRemaining);
+                fruitTimer = Mathf.FloorToInt(timeRemaining % 60);
             }
             else
             {
