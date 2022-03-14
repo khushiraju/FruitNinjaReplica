@@ -15,11 +15,16 @@ public class Fruit : MonoBehaviour
     public Sprite sliced_pomegranate;
     public Sprite dragonfruit;
     public Sprite sliced_dragonfruit;
+    public Sprite kiwi;
+    public Sprite sliced_kiwi;
+    public AudioClip sliceSound;
     public string fruitName;
 
     private void Start(){
-        LaunchFruit(2.0f, 2,-1);
+        LaunchFruit(2.0f, 1, -1);
         isSliced = false;
+        GetComponent<AudioSource> ().playOnAwake = false;
+        GetComponent<AudioSource> ().clip = sliceSound;
         
     }
     public void LaunchFruit(float verticalVelocity, float xSpeed, float xStart){
@@ -36,12 +41,11 @@ public class Fruit : MonoBehaviour
 
         verticalVelocity -= GRAVITY * Time.deltaTime;
         transform.position += new Vector3(speed, verticalVelocity, 0) * Time.deltaTime;
-        float randomNumber = Random.Range(1, 4);
+        float randomNumber = Random.Range(1, 5);
 
         if ((transform.position.y < -1)){
             isActive = false; 
             isSliced = false;
-            Debug.Log(randomNumber);
             GetComponent<SpriteRenderer>().sprite = strawberry;
             fruitName = "strawberry";
             if (randomNumber == 1){
@@ -55,6 +59,10 @@ public class Fruit : MonoBehaviour
             else if (randomNumber == 3){
                 GetComponent<SpriteRenderer>().sprite = dragonfruit; 
                 fruitName = "dragonfruit";
+            }  
+            else if (randomNumber == 4){
+                GetComponent<SpriteRenderer>().sprite = kiwi; 
+                fruitName = "kiwi";
             }   
         }
     }
@@ -75,7 +83,11 @@ public class Fruit : MonoBehaviour
             else if (fruitName.Equals("dragonfruit")){
                 GetComponent<SpriteRenderer>().sprite = sliced_dragonfruit;
             }
+            else if (fruitName.Equals("kiwi")){
+                GetComponent<SpriteRenderer>().sprite = sliced_kiwi;
+            }
             GameManager.score++;
+            GetComponent<AudioSource> ().Play ();
         }
         isSliced = true;
     }

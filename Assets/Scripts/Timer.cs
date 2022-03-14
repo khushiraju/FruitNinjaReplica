@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public static float timeRemaining = 60;
+    public static float timeRemaining = 120;
     public static float fruitTimer = 0;
     public static bool timerIsRunning = false;
     public Text timeText;

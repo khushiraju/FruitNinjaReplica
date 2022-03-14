@@ -3,7 +3,16 @@ guid: d756f11137fbe46268593c8fe5a8622a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - strawberry: {instanceID: 0}
+  - sliced_strawberry: {instanceID: 0}
+  - pomegranate: {instanceID: 0}
+  - sliced_pomegranate: {instanceID: 0}
+  - dragonfruit: {instanceID: 0}
+  - sliced_dragonfruit: {instanceID: 0}
+  - kiwi: {instanceID: 0}
+  - sliced_kiwi: {instanceID: 0}
+  - sliceSound: {fileID: 8300000, guid: 3fe793441b3024f2aa051b64b2365901, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

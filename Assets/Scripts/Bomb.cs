@@ -15,7 +15,7 @@ public class Bomb : MonoBehaviour
     
     void Start()
     {
-        LaunchBomb(3.0f, 1, -1);
+        LaunchBomb(0f, 6, -7);
         isSliced = false;
     }
     public void LaunchBomb(float verticalVelocity, float xSpeed, float xStart){
@@ -49,7 +49,6 @@ public class Bomb : MonoBehaviour
             speed = speed * 0.5f;
             GetComponent<SpriteRenderer>().sprite = sliced_bomb;
             sliceNum++;
-            Debug.Log(sliceNum);
         }
         isSliced = true;
     }
