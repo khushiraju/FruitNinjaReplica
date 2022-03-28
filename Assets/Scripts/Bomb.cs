@@ -12,12 +12,16 @@ public class Bomb : MonoBehaviour
     private bool isSliced{set; get;}
     public Sprite bomb;
     public Sprite sliced_bomb;
+    public AudioClip sliceSound;
     
     void Start()
     {
         LaunchBomb(0f, 6, -7);
         isSliced = false;
+        GetComponent<AudioSource> ().playOnAwake = false;
+        GetComponent<AudioSource> ().clip = sliceSound;
     }
+
     public void LaunchBomb(float verticalVelocity, float xSpeed, float xStart){
         isActive = true;
         speed = xSpeed; 
@@ -48,6 +52,7 @@ public class Bomb : MonoBehaviour
             }
             speed = speed * 0.5f;
             GetComponent<SpriteRenderer>().sprite = sliced_bomb;
+            GetComponent<AudioSource> ().Play ();
             sliceNum++;
         }
         isSliced = true;
