@@ -18,11 +18,18 @@ public class GameManager : MonoBehaviour
     private Vector3 lastMousePos;
     private Collider2D[] fruitCols;
     private Collider2D[] bombCols;
+    //private bool restartGame = false;
 
     private void Start(){
         fruitCols = new Collider2D[0];
         bombCols = new Collider2D[0];
     }
+
+    //create a boolean that is false, have a restart button that changes the value of the boolean. when bool is set to 
+    //true, restart the score, timer, and start launching the fruits. Keep a variable that keeps track of the high
+    //in a corner somewhere.
+
+    //reset sliceNum, timer, both colllider arrays,  
 
     private void Update(){
             if ((Time.time - lastSpawn > deltaSpawn) && (Timer.timerIsRunning == true) && (Bomb.sliceNum < 3)){
@@ -36,6 +43,9 @@ public class GameManager : MonoBehaviour
                 }
                 lastSpawn = Time.time;
             }
+            //else{
+            //    replayGame();
+            //}
 
             if(Input.GetMouseButton(0)){
                 Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -67,6 +77,13 @@ public class GameManager : MonoBehaviour
                 bombCols = thisFramesBomb;
             }
         
+    }
+
+    private void replayGame(){
+        //restartGame = true;
+        Timer.timeRemaining = 120;
+        Timer.timerIsRunning = true;
+        Bomb.sliceNum = 0; 
     }
 
     private Fruit GetFruit(){

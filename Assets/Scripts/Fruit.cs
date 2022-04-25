@@ -21,7 +21,7 @@ public class Fruit : MonoBehaviour
     public string fruitName;
 
     private void Start(){
-        LaunchFruit(2.0f, 1, -1);
+        LaunchFruit(2.0f, 2, -1);
         isSliced = false;
         GetComponent<AudioSource> ().playOnAwake = false;
         GetComponent<AudioSource> ().clip = sliceSound;
